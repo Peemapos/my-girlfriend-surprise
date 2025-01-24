@@ -8,18 +8,19 @@ body {
     align-items: center;    /* Centers content vertically */
     height: 100vh;          /* Full viewport height */
     text-align: center;     /* Centers text within its container */
-  }
-  
-  .container {
+    padding: 20px;          /* Adds some padding to avoid text touching screen edges */
+    box-sizing: border-box; /* Ensures padding does not affect layout */
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers child elements horizontally */
     justify-content: center; /* Centers child elements vertically */
     text-align: center; /* Centers text within the container */
-    
-  }
-  
-  .button {
+}
+
+.button {
     display: flex;
     padding: 10px 20px;
     background-color: #ff6fa7;
@@ -29,39 +30,82 @@ body {
     cursor: pointer;
     font-size: 16px;
     animation: scale 2s ease-in-out infinite;
-    
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #ff4f8a;
-  }
-  
-  .heart {
+}
+
+.heart {
     font-size: 30px;
     color: #ff6fa7;
     margin-top: 20px;
-    animation: pulse 1s ;
+    animation: pulse 1s;
     font-size: 18px;
-  }
+}
 
-  @keyframes scale {
+@keyframes scale {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
     50% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
- .bunny {
-    width: 300px;
-    height: 300px;
-    border-radius: 25px;
- }
+}
 
- .center-text{
+.bunny {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    object-fit: cover;  /* Ensures image fits inside container without stretching */
+    margin-top: 20px;
+}
+
+.center-text {
     font-size: 26px;
- }
+    word-wrap: break-word; /* Ensures long words break into new lines */
+}
+
+/* Media Queries for responsiveness on mobile */
+@media (max-width: 768px) {
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .heart {
+        font-size: 20px;
+    }
+
+    .center-text {
+        font-size: 20px;
+    }
+
+    .bunny {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;  /* Reduces padding on very small screens */
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .center-text {
+        font-size: 18px;
+    }
+
+    .bunny {
+        width: 150px;
+        height: 150px;
+    }
+}
