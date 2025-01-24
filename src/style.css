@@ -26,6 +26,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    animation: scale 2s ease-in-out infinite;
   }
   
   .button:hover {
@@ -47,4 +48,20 @@ body {
       transform: scale(1.2);
     }
   }
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   
+ .bunny {
+    width: 500px;
+    height: 500px;
+    border-radius: 25px;
+ }
