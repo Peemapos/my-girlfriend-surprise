@@ -16,9 +16,11 @@ body {
     align-items: center; /* Centers child elements horizontally */
     justify-content: center; /* Centers child elements vertically */
     text-align: center; /* Centers text within the container */
+    
   }
   
   .button {
+    display: flex;
     padding: 10px 20px;
     background-color: #ff6fa7;
     color: white;
@@ -27,6 +29,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     animation: scale 2s ease-in-out infinite;
+    
   }
   
   .button:hover {
@@ -38,16 +41,9 @@ body {
     color: #ff6fa7;
     margin-top: 20px;
     animation: pulse 1s ;
+    font-size: 18px;
   }
-  
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-  }
+
   @keyframes scale {
     0% {
       transform: scale(1);
