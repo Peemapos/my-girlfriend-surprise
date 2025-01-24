@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Peemapos.github.io/my-girlfriend-surprise",  
+  "homepage": "https://Peemapos.github.io/my-girlfriend-surprise",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
